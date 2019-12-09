@@ -6,6 +6,7 @@ This is my implementation of the final crystal project from Groxio/Programmer Pa
 
 * Make sure that you have crystal lang installed on your machine
 * Clone the repo
+* Install the dependencies using `shards install`
 * From the root folder, run `crystal run src/rovers.cr`
 
 ## Usage
