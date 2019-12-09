@@ -1,0 +1,5 @@
+fileignoreconfig:
+- filename: shard.lock
+  checksum: 9b261e55cd8d28083d26b7cb0b04a5631232f912a45dec0212f2347345418f69
+  ignore_detectors: []
+scopeconfig: []

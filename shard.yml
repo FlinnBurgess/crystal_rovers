@@ -1,0 +1,21 @@
+name: rovers
+version: 0.1.0
+
+authors:
+  - Flinn Burgess <flinn.burgess@gmail.com>
+
+targets:
+  rovers:
+    main: src/rovers.cr
+
+crystal: 0.31.1
+
+license: MIT
+
+dependencies:
+  spec-kemal:
+    github: kemalcr/spec-kemal
+  kemal:
+    github: kemalcr/kemal
+  rover:
+    github: batate/rover
