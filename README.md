@@ -1,27 +1,17 @@
-# rovers
+# Crystal rovers
 
-TODO: Write a description here
+This is my implementation of the final crystal project from Groxio/Programmer Passport (https://grox.io/)
 
 ## Installation
 
-TODO: Write installation instructions here
+* Make sure that you have crystal lang installed on your machine
+* Clone the repo
+* From the root folder, run `crystal run src/rovers.cr`
 
 ## Usage
 
-TODO: Write usage instructions here
-
-## Development
-
-TODO: Write development instructions here
-
-## Contributing
-
-1. Fork it (<https://github.com/your-github-user/rovers/fork>)
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create a new Pull Request
-
-## Contributors
-
-- [Flinn Burgess](https://github.com/your-github-user) - creator and maintainer
+The service has four endpoints:
+* post "rover/:name" - create a new rover
+* get "rover/:name" - view a rover's status
+* post "rover/move/:name/:instructions" - give a rover a set of instructions to execute (in strings made up of l/L, r/R, and f/F)
+* delete "rover/:name" - delete a rover
