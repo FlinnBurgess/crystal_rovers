@@ -5,22 +5,34 @@ class Store
     @@rovers || (@@rovers = {} of String => Rover)
   end
 
+  def self.mutex
+    @@mutex || (@@mutex = Mutex.new)
+  end
+
   def self.create(name)
-    rovers[name] = Rover.new
+    mutex.synchronize do
+      rovers[name] = Rover.new
+    end
   end
 
   def self.delete(name)
-    rovers.delete(name)
+    mutex.synchronize do
+      rovers.delete(name)
+    end
   end
 
   def self.get(name)
-    rovers[name]
+    mutex.synchronize do
+      rovers[name]
+    end
   end
 
   def self.move(name, move)
-    moves = move.split("").map { |m| translate_move(m) }
-    rovers[name].move(moves)
-    rovers[name].status
+    mutex.synchronize do
+      moves = move.split("").map { |m| translate_move(m) }
+      rovers[name].move(moves)
+      rovers[name].status
+    end
   end
 
   def self.translate_move(move)
