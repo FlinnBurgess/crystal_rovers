@@ -17,5 +17,5 @@ dependencies:
     github: kemalcr/spec-kemal
   kemal:
     github: kemalcr/kemal
-  rover:
-    github: batate/rover
+  sqlite3:
+    github: crystal-lang/crystal-sqlite3

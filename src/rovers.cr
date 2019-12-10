@@ -3,6 +3,7 @@ require "./store.cr"
 
 before_all "/rover" do |env|
   env.response.content_type = "application/json"
+  store = Store.new
 end
 
 post "/rover/:name" do |env|
